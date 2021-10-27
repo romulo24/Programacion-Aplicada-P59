@@ -1,4 +1,4 @@
-package Ejercicio05;
+package Ejercicio05_aunboxing;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

@@ -1,4 +1,4 @@
-package Ejercicio05;
+package Ejercicio05_aunboxing;
 import Ejercicio04.generica;
 
 public class calculadora {
@@ -48,16 +48,28 @@ public class calculadora {
 		return g.ValoresCalculados(g.getAtributo1());
 
 	}
-//ENCERAR LOS VALORES 
-	
-	public void encerar() {
-	g.setAtributo1(0.0);
-	
-	//PANEL DE LA CALCULADORA
-	pc.textField.setText("0.0");
-	
+	//ACTIVAR Y DESACTIVAR BOTONES 
+	public void estadoBotones(boolean estado) {
+		pc.btn_Suma.setEnabled(estado);
+		pc.btn_Resta.setEnabled(estado);
+		pc.btn_Multiplicacion.setEnabled(estado);
+		pc.btn_Division.setEnabled(estado);
+		pc.btn_Promedio.setEnabled(estado);
+		pc.btn_Porcentaje.setEnabled(estado);
+		pc.btn_Ac.setEnabled(estado);
+		pc.btn_Resultado.setEnabled(estado);
+
 	}
-	
+
+	//ENCERAR LOS VALORES 
+	public void encerar() {
+		g.setAtributo1(0.0);
+		g.setAtributo3(0);
+		//PANEL DE LA CALCULADORA
+		pc.textField.setText("0.0");
+
+	}
+
 	public void addValores(Double valor) {
 		g.setAtributo1(getSuma(valor));
 		g.setAtributo3(g.getAtributo3()+1);
